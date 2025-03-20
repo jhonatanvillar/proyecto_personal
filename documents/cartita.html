@@ -16,36 +16,37 @@
         Tu navegador no soporta audio.
     </audio>
     <!-- <?php include_once("header.html"); ?> -->
-     
-<header>
-    <nav class="navbar navbar-expand-lg bg-rosa ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"> <img src="../imagenes/corazon.png" width="50px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./page.html">Magui</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./recuerdos.html">Recuerdos <img src="../imagenes/recuerdos.png" alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cartita.html"  aria-disabled="true">Cartita</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./juego.html">jueguito <i class="fa-solid fa-gamepad"></i></a>
-                    </li>
-                   
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-</header>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-rosa ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="../imagenes/corazon.png" width="50px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./page.html">Magui</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./recuerdos.html">Recuerdos <img src="../imagenes/recuerdos.png"
+                                    alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cartita.html" aria-disabled="true">Cartita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./juego.html">jueguito <i class="fa-solid fa-gamepad"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
 
 
     <div class="section">
@@ -64,9 +65,14 @@
                 <div class="side two">
                     <h2>Para mi amorcito</h2>
                     <p>Querida Magui... </p>
-                    <p>Hoy quiero tomarme un momento para decirte algo que quizás ya sepas, pero que nunca está de más recordar: eres una mujer increíble. Tu fortaleza, tu independencia y tu determinación son inspiradoras.</p>
-                    <p>No temes ir tras lo que quieres, luchas por tus sueños y enfrentas cada desafío con valentía. No necesitas que nadie te defina, porque tú misma has construido tu camino con esfuerzo y pasión.   </p>
-                    <p> Tu resiliencia demuestra que no hay obstáculo que pueda detenerte, y tu esencia brilla con una luz propia que ilumina a quienes tienen la suerte de conocerte.</p>
+                    <p>Hoy quiero tomarme un momento para decirte algo que quizás ya sepas, pero que nunca está de más
+                        recordar: eres una mujer increíble. Tu fortaleza, tu independencia y tu determinación son
+                        inspiradoras.</p>
+                    <p>No temes ir tras lo que quieres, luchas por tus sueños y enfrentas cada desafío con valentía. No
+                        necesitas que nadie te defina, porque tú misma has construido tu camino con esfuerzo y pasión.
+                    </p>
+                    <p> Tu resiliencia demuestra que no hay obstáculo que pueda detenerte, y tu esencia brilla con una
+                        luz propia que ilumina a quienes tienen la suerte de conocerte.</p>
                     <p>Un abrazo y un beso. Chupéx</p>
                 </div>
             </div>
@@ -81,24 +87,20 @@
         crossorigin="anonymous"></script>
 </body>
 <script>
-    document.addEventListener("click", function() {
-    let audio = document.getElementById("bgMusic");
-    audio.muted = false;
-    audio.play();
-}, { once: true }); // Solo ejecuta esto una vez
+   
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Al cargar la página, ocultamos las cortinas
         $('.left-curtain').css('width', '0%');
         $('.right-curtain').css('width', '0%');
 
-        $('.valentines-day').click(function() {
+        $('.valentines-day').click(function () {
             // Animación de desvanecimiento de los elementos del sobre
             $('.envelope').css({
                 'animation': 'fall 3s linear 1',
                 '-webkit-animation': 'fall 3s linear 1'
             });
-            $('.envelope').fadeOut(800, function() {
+            $('.envelope').fadeOut(800, function () {
                 // Ocultar elementos dentro de .valentines-day
                 $('.valentines-day .heart, .valentines-day .text, .valentines-day .front').hide();
 
@@ -113,7 +115,7 @@
                     'opacity': 1
                 }, {
                     duration: 1000,
-                    step: function(now, fx) {
+                    step: function (now, fx) {
                         var scale = 1 + Math.sin(now * Math.PI) * 0.1; // Calculamos la escala basada en la función seno
                         $(this).css('transform', 'scale(' + scale + ')');
                     }
@@ -124,25 +126,26 @@
 </script>
 <style>
     body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../imagenes/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    opacity: 0.8; 
-    z-index: -1;
-}
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../imagenes/fondo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.8;
+        z-index: -1;
+    }
+
     @import url('https://fonts.googleapis.com/css?family=Sacramento');
 
     #card {

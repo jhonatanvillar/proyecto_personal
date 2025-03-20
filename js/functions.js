@@ -8,3 +8,8 @@ function abrirImagen(event) {
     document.getElementById("imagenModal").src = ruta;
 
 }
+document.addEventListener("click", function () {
+    let audio = document.getElementById("bgMusic");
+    audio.muted = false;
+    audio.play();
+}, { once: true });
