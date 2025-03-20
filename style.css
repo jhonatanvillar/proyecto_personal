@@ -1,0 +1,18 @@
+.centrado-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.8;
+    position: fixed;
+}
+.nav-link > img {
+    width: 25px;
+}
+.navbar-nav .nav-link:hover{
+    color:red
+}
+.active{
+    color: red !important;
+}
