@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+   
 
     <!-- <iframe src="../song.html" style="display: none;"></iframe> -->
     <!-- <?php include_once("header.html"); ?> -->
@@ -51,36 +51,41 @@
     </header>
 
 
-        <div class="container">
+    <div class="container">
 
-            <div class="bgoverlay">
-                <div class="container">
-                    <span class="ico">
-                        <span class="ico2"></span>
-                        <span class="title">Magui</span>
-                    </span>
-                    <div class="endtext">
-                        <span class="close" title="Close"><i class="fa fa-times"></i></span>
-                             <h1>Feliz Cumpleaños Caldos Magui</h1>
-                        <h2>~</h2>
-                        <h3>De tu Novio Jhonatan</h3>
-                    </div>
+        <div class="bgoverlay">
+            <div class="container">
+                <span class="ico">
+                    <span class="ico2"></span>
+                    <span class="title">Magui</span>
+                </span>
+                <div class="endtext">
+                    <span class="close" title="Close"><i class="fa fa-times"></i></span>
+                         <h1>Feliz Cumpleaños Caldos Magui</h1>
+                    <h2>~</h2>
+                    <h3>De tu Novio Jhonatan</h3>
                 </div>
             </div>
         </div>
+    </div>
 
 
     <script src="../js/functions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <audio id="bgMusic" autoplay>
-        <source src="../musica/hb.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
+        <audio id="bgMusic" autoplay>
+            <source src="../musica/hb.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
 </body>
 <script>
+
+
     document.addEventListener("DOMContentLoaded", function () {
+
+       
+
 
         document.querySelector(".title").addEventListener("click", function () {
             document.querySelector(".container").classList.add("open");
@@ -115,12 +120,12 @@
 
     /* @import url(font:400 95px/1em Amatic SC;text-align:center;padding-top:140px); */
 
-    body {
+    /* body {
         background: url(https://subtlepatterns.com/patterns/noise_lines.png);
         font-family: 'Amatic SC', cursive;
         overflow: hidden;
         color: #fff;
-    }
+    } */
 
     .bgoverlay {
         background: #fff;
@@ -134,7 +139,7 @@
 
     .container {
         position: relative;
-        margin: 100px auto 0 auto;
+        margin: 220px auto 0 auto;
         width: 320px;
     }
 
@@ -142,17 +147,17 @@
     .ico {
         display: block;
         width: 320px;
-        height: 320px;
+        height: 450px;
     }
 
     .open .ico {
         animation: open 4s;
-        transform: scale(10);
+        transform: scale(3);
     }
 
     .ico .title {
         position: absolute;
-        top: 70%;
+        top: 50%;
         left: 50%;
         margin-left: -95px;
         margin-top: -73px;
@@ -289,7 +294,7 @@
         }
 
         to {
-            transform: scale(10);
+            transform: scale(3);
         }
     }
 
